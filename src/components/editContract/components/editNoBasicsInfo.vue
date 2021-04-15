@@ -99,13 +99,13 @@
     </el-form-item>
     </el-col>
       <el-col :span="8">
-    <el-form-item  label="country of Ceding Company" prop="countryofCedingCompany" ref="countryofCedingCompany" >
-      <el-input v-model="formData.countryofCedingCompany" disabled></el-input>
+    <el-form-item  label="country of Ceding Company" prop="countryOfCedingCompany" ref="countryOfCedingCompany" >
+      <el-input v-model="formData.countryOfCedingCompany" disabled></el-input>
     </el-form-item>
     </el-col>
       <el-col :span="8">
-    <el-form-item  label="CountryofProducingBroker" prop="countryofProducingBroker" ref="countryofProducingBroker">
-      <el-input v-model="formData.countryofProducingBroker" disabled></el-input>
+    <el-form-item  label="Country of Producing Broker" prop="countryOfProducingBroker" ref="countryOfProducingBroker">
+      <el-input v-model="formData.countryOfProducingBroker" disabled></el-input>
     </el-form-item>
     </el-col>
       <el-col :span="8">
@@ -202,7 +202,7 @@ export default {
       this.cedingCompanyList.forEach(item =>{
         for(let key in item){
          if(item.englishName === this.formData.cedingCompany){
-           this.formData.countryofCedingCompany = item.countriesAndRegions
+           this.formData.countryOfCedingCompany = item.countriesAndRegions
          }
         }
       })
@@ -212,7 +212,7 @@ export default {
         this.cedingCompanyList.forEach(item =>{
         for(let key in item){
          if(item.englishName === this.formData.producingBroker){
-           this.formData.countryofProducingBroker = item.countriesAndRegions
+           this.formData.countryOfProducingBroker = item.countriesAndRegions
          }
         }
       })

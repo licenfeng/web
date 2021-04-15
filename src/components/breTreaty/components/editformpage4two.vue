@@ -235,7 +235,7 @@ export default {
         },
        async  getBreCustomerCompanyInfoList(){
        const {data} = await  this.$axios.getBreCustomerCompanyInfoList({})
-        this.cedingCompanyList =  data.data
+        this.cedingCompanyList =  data.data;
     }
     }
 }

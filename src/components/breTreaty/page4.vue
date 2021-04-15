@@ -368,7 +368,9 @@
             },
             //这里是编辑ID
             handleEdit(val, res) {
-                this.$router.push({name: "editpage4", params: {id: res.propId, breSlipNumber: res.breSlipNumber}})
+                console.log(res);
+                console.log('888888888888');
+                this.$router.push({name: "editpage4", query: {id: res.propId,breSlipNumber: res.breSlipNumber}})
             },
             edit() {
                 this.$router.push({

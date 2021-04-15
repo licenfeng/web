@@ -112,11 +112,11 @@
               <el-input v-model="form.reinsurerRemarks" ></el-input>
             </el-form-item>
             </el-col>
-             <el-col :span="8">
-            <el-form-item label="Settlement Currency Broker">
-                <el-input v-model="form.settlementCurrencyBroker" ></el-input>
-            </el-form-item>
-            </el-col>
+             <!--<el-col :span="8">-->
+            <!--<el-form-item label="Settlement Currency Broker">-->
+                <!--<el-input v-model="form.settlementCurrencyBroker" ></el-input>-->
+            <!--</el-form-item>-->
+            <!--</el-col>-->
             <el-col :span="8">
             <el-form-item label="Country of Placement Broker" >
               <el-input v-model="form.countryOfPlacementBroker" ></el-input>

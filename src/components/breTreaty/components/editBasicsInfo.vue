@@ -99,7 +99,7 @@
     </el-form-item>
     </el-col>
       <el-col :span="8">
-    <el-form-item  label="country of Ceding Company" prop="countryofCedingCompany" ref="countryofCedingCompany" >
+    <el-form-item  label="country of Ceding Company" prop="countryOfCedingCompany" ref="countryOfCedingCompany" >
       <el-input v-model="formData.countryOfCedingCompany" disabled></el-input>
     </el-form-item>
     </el-col>
@@ -142,7 +142,7 @@ data(){
         // currency:"",
         // leadingReinsurer:"",
         // expiryDate:"",  
-        // countryofCedingCompany:"",
+        // countryOfCedingCompany:"",
         // countryofProducingBroker:"",
         // underwritingYear:"", //展示项
       },

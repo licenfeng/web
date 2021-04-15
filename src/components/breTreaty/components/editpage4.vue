@@ -25,7 +25,7 @@
     <!-- <el-form-item label="Fixed/Provisional Comm. for QUO"> -->
     <el-form-item label="Fixed/Prov. Comm. for QUO">
         <el-select
-                v-model="form.fixedOrProvisionalCommissionforQuota"
+                v-model="form.fixedOrProvisionalCommissionQuo"
                 filterable
                 placeholder="请选择"
         >
@@ -53,7 +53,7 @@
     <!-- <el-form-item label="Fixed/Provisional Comm. for SPL"> -->
     <el-form-item label="Fixed/Prov. Comm. for SPL">
         <el-select
-                v-model="form.fixedOrProvisionalCommissionForSurplus"
+                v-model="form.fixedOrProvisionalCommissionSpl"
                 filterable
                 placeholder="请选择">
             <el-option label="Fixed Comm. for SPL" value="Fixed Comm. for SPL"></el-option>
@@ -97,9 +97,10 @@ export default {
         cessionForQuotaShare:"",
         lineSurplus:"",
         commissionForQuotaShare:"",
-        fixedOrProvisionalCommission:"",
+        //fixedOrProvisionalCommission:"",
+        fixedOrProvisionalCommissionQuo:"",
         commissionForSurplus:"",
-        fixedOrProvisionalCommission:"",
+        fixedOrProvisionalCommissionSpl:"",
         epiForQuotaShare:"",
         epiForSurplus:"",
         eventLimit:""
@@ -109,9 +110,10 @@ export default {
       }
     },
     created(){
-      this.getParamsId()
-      this.id = this.$route.params.id //这是 这是propId
-      this.value = this.$route.params.breSlipNumber //这是breSlipNumber
+
+      this.id = this.$route.query.id //这是propId
+      this.value = this.$route.query.breSlipNumber //这是breSlipNumber
+         this.getParamsId();
     },
     methods: {
     async onSubmit() {
@@ -130,7 +132,7 @@ export default {
       },
    async getParamsId(){
      console.log(this.id,this.value);
-      const {data} = await this.$axios.selectBreTreatyPropInfo({id:this.id,breSlipNumber:this.value})
+      const {data} = await this.$axios.selectBreTreatyPropInfo({propId:this.id,breSlipNumber:this.value})
       const number = data.data
       number.forEach(item=>{
         for(let key in item){

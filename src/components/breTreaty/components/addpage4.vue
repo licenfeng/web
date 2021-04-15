@@ -28,7 +28,7 @@
     <!-- <el-form-item label="Fixed/Provisional Comm. for QUO"> -->
     <el-form-item label="Fixed/Prov. Comm. for QUO">
         <el-select
-                v-model="form.fixedOrProvisionalCommissionforQuota"
+                v-model="form.fixedOrProvisionalCommissionQuo"
                 filterable
                 placeholder="请选择"
         >
@@ -56,7 +56,7 @@
     <!-- <el-form-item label="Fixed/Provisional Comm. for SPL"> -->
     <el-form-item label="Fixed/Prov. Comm. for SPL">
         <el-select
-                v-model="form.fixedOrProvisionalCommissionForSurplus"
+                v-model="form.fixedOrProvisionalCommissionSpl"
                 filterable
                 placeholder="请选择">
             <el-option label="Fixed Comm. for SPL" value="Fixed Comm. for SPL"></el-option>
@@ -103,9 +103,10 @@ export default {
         cessionForQuotaShare:"",
         lineSurplus:"",
         commissionForQuotaShare:"",
-        fixedOrProvisionalCommissionforQuota:"",
+        fixedOrProvisionalCommissionQuo:"",
         commissionForSurplus:"",
-        fixedOrProvisionalCommissionForSurplus:"",
+        // fixedOrProvisionalCommissionForSurplus:"",
+        fixedOrProvisionalCommissionSpl:"",
         epiForQuotaShare:"",
         epiForSurplus:"",
         eventLimit:"",

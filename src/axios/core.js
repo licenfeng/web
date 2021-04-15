@@ -11,7 +11,7 @@ const userName=  window.sessionStorage.getItem('token');
 // const url = 'http://192.168.43.76:8080/';
 // const url = 'http://192.168.43.129:8080/';
 // const url = "http://192.168.43.129:8080/";
-const url = "http://172.20.10.2:8080/";
+const url = "http://127.0.0.1:8083/";
 //创建一个axios实例 返回一个axios对象
 const instanceGet = axios.create({
     baseURL: url,  //发送请求时会在url前面拼接 baseURL

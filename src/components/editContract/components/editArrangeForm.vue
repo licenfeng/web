@@ -94,12 +94,12 @@
               <el-input v-model="form.reinsurerRemarks" ></el-input>
             </el-form-item>
             </el-col>
-             <el-col :span="8">
+   <!--          <el-col :span="8">
             <el-form-item label="Settlement Currency Broker">
                 <el-input v-model="form.settlementCurrencyBroker" ></el-input>
             </el-form-item>
             </el-col>
-            
+            -->
             <el-col :span="8">
              <el-form-item label="BRE Brokerage Percent" >
               <el-input v-model="form.breBrokeragePercent"></el-input>
